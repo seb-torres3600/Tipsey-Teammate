@@ -1,0 +1,159 @@
+ <%- include('../partials/header') %>
+  <body>
+    <div style="text-align: center;" >
+     <img src="wipLogo.png" width="800px">
+    </div>
+  </body>
+  <br>
+   <body>
+     <title>Bootstrap Card</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/UI.css">
+     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  </body>
+ <br>
+ 
+ <body>
+     <div class="container">
+      <div class="row">
+           
+        <%
+          if(allDrinks){
+            console.log('got into if');
+            var card_group = '';
+              var numItems = 0;
+            allDrinks.forEach(function(item){
+              numItems++;
+              var card = '<div class="col-sm-4 card"><div class="card" style="width: 22rem">';
+              var card_body = '<div class="card-body">';
+              var title = item.drink_name;
+              card_body += '<h5>' + title+'</h5>'
+
+              if(item.ingredient_one == null || item.ingredient_one =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_one +': ' + item.quantiry_one_oz + ' oz </p>';
+           }
+           if(item.ingredient_two == null || item.ingredient_two =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_two +': ' + item.quantity_two_oz + ' oz </p>';
+           }
+           if(item.ingredient_three == null || item.ingredient_three =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_three +': ' + item.quantity_three_oz + ' oz </p>';
+           }
+           if(item.ingredient_four == null || item.ingredient_four =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_four +': ' + item.quantity_four_oz + ' oz </p>';
+           }
+           if(item.ingredient_five == null || item.ingredient_five =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_five +': ' + item.quantity_five_oz + ' oz </p>';
+           }
+           if(item.ingredient_six == null || item.ingredient_six =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_six +': ' + item.quantity_six_oz + ' oz </p>';
+           }
+           if(item.ingredient_seven == null || item.ingredient_seven =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_seven +': ' + item.quantity_seven_oz + ' oz </p>';
+           }
+           if(item.ingredient_eight == null || item.ingredient_eight =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_eight +': ' + item.quantity_eight_oz + ' oz </p>';
+           }
+           if(item.ingredient_nine == null || item.ingredient_nine =="null"){
+             // card_body += '<p>no</p>'
+           }
+           else{
+             card_body += '<p>' + item.ingredient_nine +': ' + item.quantity_nine_oz + ' oz </p>';
+           }
+              
+              card_body += '</div>';
+              card += card_body;
+              card += '</div>'  
+              card_group += card;
+              card_group += '</div>';
+            
+            })
+            if(numItems == 0){
+              card_group = '<p>Sorry! No drinks with that name were found!</p>';
+            }
+            %>
+            <%- card_group %>
+            <% }%> 
+            
+  
+        </div>
+    </div>
+   
+  <br><br>
+  <style>
+    h3 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+  </style>
+
+<h3>Suggestions:</h3>
+<br>
+<div class="container">
+    <div class="row">
+         <div class="col-sm-4 card">
+
+            <div class="card" style="width: 22rem">
+            <img class="card-img-top" src="drink1.png" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">El Diablo</h5>
+              <p class="card-text">When most people think of classic tequila drinks, their mind probably goes to the Margarita first. They may never get to the El Diablo, but they should. This mid-century classic combines tequila with crème de cassis, lime juice and ginger.</p>
+              <a href="search?id=El+Diablo" class="btn btn-primary">More info</a>
+              </div>
+           </div>
+         </div>
+
+        <div class="col-sm-4 card">
+            <div class="card" style="width: 22rem">
+            <img class="card-img-top" src="drink2.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Paloma</h5>
+                <p class="card-text">Patrón Reposado Tequila Perfects this classic with Refreshing Grapefruit & Lime juice. Looking for a Classic Paloma? Try Our Patrón Perfect Paloma Recipe.</p>
+                <br>
+                <br>
+                <a href="search?id=Paloma" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 card">
+           <div class="card" style="width: 22rem">
+            <img class="card-img-top" src="drink3.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Hairy Navel</h5>
+                <p class="card-text">The Hairy Navel is the drink you're looking for if you want a fuzzy navel with vodka. It has the same wonderful flavor combination of orange and peach, it's just a little stronger.</p>
+                <br>
+                <a href="search?id=Hairy+Navel" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  </body>

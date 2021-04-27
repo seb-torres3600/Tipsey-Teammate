@@ -1,0 +1,83 @@
+body {
+    /*background-color: rgb(138, 206, 207);*/
+    background-color: rgb(253, 252, 244);
+  }
+
+h1 {
+    color: rgb(237, 222, 15);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+p1 {
+      color: rgb(74, 74, 64);
+  }
+.topnav {
+    /*background-color: rgb(253, 252, 244);*/
+    background-color: rgb(138, 206, 207);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.topnav a {
+    float: left;
+    color: rgb(0,2,0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color: rgb(74, 74, 64);
+    color: rgb(253, 252, 244);
+  }
+.topnav a.active {
+    background-color: rgb(138, 206, 207);
+    color: rgb(253, 252, 244);
+  }
+.logo-image{
+    width: 14px;
+    height: 16px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.topnav .search-container {
+  float: right;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
